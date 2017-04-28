@@ -207,6 +207,7 @@ function ensureConfig(filePath, fileType, config) {
 }
 
 export {
+    getConfig,
     getUpdatedConfig,
     ensureConfig,
     createBackupFile,
