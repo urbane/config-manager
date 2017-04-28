@@ -1,0 +1,51 @@
+{
+  "name": "@urbane/config-manager",
+  "description": "Library for reading and updating configuration files in a variety of formats.",
+  "keywords": [
+    "config",
+    "json",
+    "yaml",
+    "ini",
+    "properties"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "David Urbane",
+    "email": "david@davidurbane.com",
+    "website": "https://davidurbane.com"
+  },
+  "homepage": "https://github.com/urbane/config-manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urbane/config-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/urbane/config-manager/issues"
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest",
+    "compile": "babel index.js --out-file index-compiled.js",
+    "prepublish": "npm test && npm run compile && git add . && git commit -m 'Publishing' && git push origin master",
+    "postpublish": "npm version patch"
+  },
+  "main": "index-compiled.js",
+  "optionalDependencies": {
+    "js-yaml": "^3.8.3",
+    "properties": "^1.2.1",
+    "x2js": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^19.0.2"
+  },
+  "dependencies": {
+    "debug": "^2.6.6",
+    "deepmerge": "^1.3.2",
+    "diff": "^3.2.0"
+  }
+}

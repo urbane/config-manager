@@ -1,0 +1,8 @@
+l1prop: true
+# Some good old fashioned comments
+someObj:
+  prop1: 1
+  prop2: 2
+  deepArray:
+    - a
+    - b
