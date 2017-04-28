@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.HANDLERS = exports.needsUpdate = exports.createBackupFile = exports.ensureConfig = exports.getUpdatedConfig = undefined;
+exports.HANDLERS = exports.needsUpdate = exports.createBackupFile = exports.ensureConfig = exports.getUpdatedConfig = exports.getConfig = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -225,6 +225,7 @@ function ensureConfig(filePath, fileType, config) {
     });
 }
 
+exports.getConfig = getConfig;
 exports.getUpdatedConfig = getUpdatedConfig;
 exports.ensureConfig = ensureConfig;
 exports.createBackupFile = createBackupFile;
